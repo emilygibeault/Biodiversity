@@ -1,0 +1,8 @@
+library(spocc)
+library(raster)
+horse <- occ(query = 'Equus caballus', from = 'gbif')
+print(horse)
+View(horse)
+df = as.data.frame(occ2df(horse$gbif))
+library(mapr)
+map_leaflet(horse)
